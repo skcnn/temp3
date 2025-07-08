@@ -1,0 +1,13 @@
+name: Create a comment when issue is created
+
+on:
+  issues:
+    type: [opened]
+
+jobs:
+  create-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "dump github context"
+        run: echo '${{ toJSON(github.context) }}' | jq
+        shell: bash
