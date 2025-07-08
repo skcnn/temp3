@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello
-        run: echo "Hello world 🌎"
+        run: echo '${{ secrets.GITHUB_TOKEN }}'
         shell: bash
   bye:
     runs-on: ubuntu-latest
