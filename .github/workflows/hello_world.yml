@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello
-        run: echo '${{ github.event.organization }}'
+        run: echo '${{ github.repository_owner }}'
         shell: bash
   bye:
     runs-on: ubuntu-latest
