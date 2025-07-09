@@ -18,13 +18,13 @@ jobs:
         run: echo '${{ github.repository_owner }}'
         shell: bash
       - name: github secrets
-        run: echo '${{ secrets }}'
+        run: echo '${{ toJSON(secrets) }}'
         shell: bash
       - name: github event
-        run: echo '${{ github.event }}'
+        run: echo '${{ toJSON(github.event) }}'
         shell: bash
       - name: simple github
-        run: echo '${{ github }}'
+        run: echo '${{ toJSON(github) }}'
         shell: bash
   bye:
     runs-on: ubuntu-latest
